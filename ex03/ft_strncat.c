@@ -6,7 +6,7 @@
 /*   By: mel-faqu <mel-faqu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 09:13:02 by mel-faqu          #+#    #+#             */
-/*   Updated: 2022/09/14 10:29:50 by mel-faqu         ###   ########.fr       */
+/*   Updated: 2022/09/14 11:47:58 by mel-faqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 		dst++;
 	while (*src != '\0' && nb > 0)
 	{
-		*dst = *(unsigned char *)src;
+		*dst = *src;
 		dst++;
 		src++;
 		nb--;

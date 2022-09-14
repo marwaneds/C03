@@ -6,26 +6,17 @@
 /*   By: mel-faqu <mel-faqu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:50:15 by mel-faqu          #+#    #+#             */
-/*   Updated: 2022/09/14 10:30:19 by mel-faqu         ###   ########.fr       */
+/*   Updated: 2022/09/14 11:08:15 by mel-faqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	unsigned int	i;
-
-	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	while (*s1 != '\0' && (*s1 == *s2) && n > 0)
 	{
-		if (s1[i] > s2[i])
-		{
-			return (1);
-		}
-		else if (s1[i] < s2[i])
-		{
-			return (-1);
-		}
-		i++;
+		s1++;
+		s2++;
+		n--;
 	}
-	return (0);
+	return (*s1 - *s2);
 }
