@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-faqu <mel-faqu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 13:43:00 by mel-faqu          #+#    #+#             */
-/*   Updated: 2022/09/14 10:32:54 by mel-faqu         ###   ########.fr       */
+/*   Created: 2022/09/14 09:20:06 by mel-faqu          #+#    #+#             */
+/*   Updated: 2022/09/14 10:29:07 by mel-faqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+char	*ft_strstr(char *str, char *to_find)
 {
-	int		i;
-	char	curr1;
-	char	curr2;
+	int	n;
+	int	i;
+	int	a;
 
+	n = 0;
 	i = 0;
-	curr1 = s1[i];
-	curr2 = s2[i];
-	while (curr1 != '\0' || curr2 != '\0')
-	{
-		curr1 = s1[i];
-		curr2 = s2[i];
-		if (curr1 != curr2)
-		{
-			return (0);
-		}
+	a = 0;
+	if (to_find[i] == '\0')
+		return (str);
+	while (to_find[i])
 		i++;
+	while (str[n])
+	{
+		a = 0;
+		while (str[n] && str[n++] == to_find[a++])
+		{
+			if (to_find[a] == '\0')
+				return (&str[n - a]);
+		}
 	}
-	return (1);
+	return (0);
 }
