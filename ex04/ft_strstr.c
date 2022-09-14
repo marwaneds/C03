@@ -6,7 +6,7 @@
 /*   By: mel-faqu <mel-faqu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 09:20:06 by mel-faqu          #+#    #+#             */
-/*   Updated: 2022/09/14 12:04:59 by mel-faqu         ###   ########.fr       */
+/*   Updated: 2022/09/14 12:17:35 by mel-faqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ char	*ft_strstr(char *str, char *to_find)
 	a = 0;
 	if (to_find[i] == '\0')
 		return (str);
-	while (to_find[i])
-		i++;
 	while (str[n])
 	{
 		a = 0;
